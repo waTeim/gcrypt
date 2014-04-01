@@ -1,0 +1,7 @@
+pod "gcrypt", :path => "../gcrypt.podspec"
+
+target "Demo" do
+end
+
+target "DemoTests" do
+end
