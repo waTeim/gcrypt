@@ -10,10 +10,11 @@ This is a general purpose cryptographic library based on the code from GnuPG. It
   s.license      = 'LPGL'
   s.author       = { "waTeim" => "truthset@gmail.com" }
   s.source       = { :git => "https://github.com/waTeim/gcrypt.git", :tag => s.version.to_s }
-
   s.platform     = :osx, '10.6'
   s.requires_arc = false
   s.vendored_libraries = 'lib/*.a'
-  s.source_files = s.public_header_files = 'include/*.h'
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/gcrypt/include"' }
+  s.private_header_files = s.source_files =
+     'include/*.h'
   s.header_mappings_dir = 'include'
 end
